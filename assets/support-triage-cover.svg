@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+  <title id="title">Support ticket triage</title>
+  <desc id="desc">Surface aging tickets and route the next step</desc>
+  <rect width="960" height="440" rx="24" fill="#0B1220"/>
+  <path d="M40 82H920M40 370H920" stroke="#2B3B55"/>
+  <g transform="translate(746 222)">
+  <circle r="154" fill="#111C30"/>
+  <circle r="116" fill="none" stroke="#31435F"/>
+  <circle r="76" fill="none" stroke="#31435F"/>
+  <ellipse rx="177" ry="63" fill="none" stroke="#F59A2C" stroke-width="2" transform="rotate(72)"/>
+  <ellipse rx="157" ry="47" fill="none" stroke="#657898" transform="rotate(154)"/>
+  <circle cx="0" cy="0" r="24" fill="#F59A2C" fill-opacity=".13"/>
+  <circle cx="0" cy="0" r="9" fill="#F59A2C"/>
+  <circle cx="102" cy="-30" r="6" fill="#F59A2C"/>
+  <path d="M-177 0H177M0-154V154" stroke="#647795" stroke-opacity=".25" stroke-dasharray="4 7"/>
+</g>
+  <g font-family="system-ui, sans-serif">
+    <text x="54" y="55" fill="#F59A2C" font-size="18" font-weight="700" letter-spacing="3">METAORBIT</text>
+    <text x="54" y="135" fill="#A8B8D0" font-size="19" font-weight="600">Customer Support</text>
+    <text x="54" y="201" fill="#F1F5FD" font-size="49" font-weight="750"><tspan x="54" dy="0">Support ticket</tspan><tspan x="54" dy="55">triage</tspan></text>
+    <text x="54" y="412" fill="#E5B57B" font-size="18" font-weight="550">Surface aging tickets and route the next step</text>
+  </g>
+</svg>

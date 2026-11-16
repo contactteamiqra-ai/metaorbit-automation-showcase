@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="321" viewBox="0 0 1200 321" role="img" aria-labelledby="title desc">
+  <title id="title">Company research for sales architecture</title>
+  <desc id="desc">Schedule or manual start flows to Read pending sheet rows. Read pending sheet rows flows to Loop over companies. Loop over companies flows to Research agent. Research agent flows to Parse structured fields. Parse structured fields flows to Merge with source row. Loop over companies flows to Merge with source row. Merge with source row flows to Update Sheets row. Update Sheets row flows to Loop over companies. Search + webpage tools attaches to Research agent.</desc>
+  <rect width="1200" height="321" rx="18" fill="#0B1220"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#F59A2C"/></marker>
+    <marker id="toolArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#A7B9D1"/></marker>
+  </defs>
+  <g font-family="system-ui, sans-serif">
+    <text x="24" y="38" font-size="23" font-weight="700" fill="#F1F5FD">Company research for sales</text>
+    <text x="24" y="62" font-size="13" fill="#A7B9D1">Simplified architecture from static template review</text>
+  </g>
+  <g fill="none" stroke-width="2">
+    <path d="M182 122C202 122 202 122 222 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M380 122C400 122 400 122 420 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M578 122C598 122 598 122 618 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M776 122C796 122 796 122 816 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M974 122C994 122 994 122 1014 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M499 90V75H1093V90" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M1093 154V189" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M1093 253V271H499V154" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M697 189V154" stroke="#A7B9D1" stroke-dasharray="4 4" marker-end="url(#toolArrow)"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F1F5FD">
+    <rect x="24" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="103" y="119" text-anchor="middle"><tspan x="103" dy="0">Schedule or manual</tspan><tspan x="103" dy="16">start</tspan></text>
+    <rect x="222" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="301" y="119" text-anchor="middle"><tspan x="301" dy="0">Read pending sheet</tspan><tspan x="301" dy="16">rows</tspan></text>
+    <rect x="420" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="499" y="127" text-anchor="middle"><tspan x="499" dy="0">Loop over companies</tspan></text>
+    <rect x="618" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="697" y="127" text-anchor="middle"><tspan x="697" dy="0">Research agent</tspan></text>
+    <rect x="816" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="895" y="119" text-anchor="middle"><tspan x="895" dy="0">Parse structured</tspan><tspan x="895" dy="16">fields</tspan></text>
+    <rect x="1014" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="1093" y="119" text-anchor="middle"><tspan x="1093" dy="0">Merge with source</tspan><tspan x="1093" dy="16">row</tspan></text>
+    <rect x="1014" y="189" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="1093" y="226" text-anchor="middle"><tspan x="1093" dy="0">Update Sheets row</tspan></text>
+    <rect x="618" y="189" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="697" y="218" text-anchor="middle"><tspan x="697" dy="0">Search + webpage</tspan><tspan x="697" dy="16">tools</tspan></text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#A7B9D1">
+    <path d="M24 301h26" stroke="#F59A2C" stroke-width="2"/><text x="59" y="305">Processing flow</text>
+    <path d="M185 301h26" stroke="#A7B9D1" stroke-width="2" stroke-dasharray="4 4"/><text x="220" y="305">Tool or AI resource</text>
+  </g>
+</svg>

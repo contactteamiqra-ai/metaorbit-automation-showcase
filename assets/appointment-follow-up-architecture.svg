@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="804" height="420" viewBox="0 0 804 420" role="img" aria-labelledby="title desc">
+  <title id="title">Appointment follow-up architecture</title>
+  <desc id="desc">Inbound SMS flows to Check commands. Check commands flows to Load session → booking agent. Load session → booking agent flows to Save session → SMS reply. Check commands flows to Record STOP → confirm. Daily schedule flows to Find leads → draft follow-up. Find leads → draft follow-up flows to Update count → send SMS. Cal.com booking tools attaches to Load session → booking agent.</desc>
+  <rect width="804" height="420" rx="18" fill="#0B1220"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#F59A2C"/></marker>
+    <marker id="toolArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#A7B9D1"/></marker>
+  </defs>
+  <g font-family="system-ui, sans-serif">
+    <text x="24" y="38" font-size="23" font-weight="700" fill="#F1F5FD">Appointment follow-up</text>
+    <text x="24" y="62" font-size="13" fill="#A7B9D1">Simplified architecture from static template review</text>
+  </g>
+  <g fill="none" stroke-width="2">
+    <path d="M182 122C202 122 202 122 222 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M380 122C400 122 400 122 420 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M578 122C598 122 598 122 618 122" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M380 122C400 122 400 221 420 221" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M182 320C202 320 202 320 222 320" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M380 320C400 320 400 320 420 320" stroke="#F59A2C" marker-end="url(#arrow)"/>
+    <path d="M618 221C598 221 598 122 578 122" stroke="#A7B9D1" stroke-dasharray="4 4" marker-end="url(#toolArrow)"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F1F5FD">
+    <rect x="24" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="103" y="127" text-anchor="middle"><tspan x="103" dy="0">Inbound SMS</tspan></text>
+    <rect x="222" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="301" y="127" text-anchor="middle"><tspan x="301" dy="0">Check commands</tspan></text>
+    <rect x="420" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="499" y="119" text-anchor="middle"><tspan x="499" dy="0">Load session →</tspan><tspan x="499" dy="16">booking agent</tspan></text>
+    <rect x="618" y="90" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="697" y="119" text-anchor="middle"><tspan x="697" dy="0">Save session → SMS</tspan><tspan x="697" dy="16">reply</tspan></text>
+    <rect x="420" y="189" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="499" y="218" text-anchor="middle"><tspan x="499" dy="0">Record STOP →</tspan><tspan x="499" dy="16">confirm</tspan></text>
+    <rect x="24" y="288" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="103" y="325" text-anchor="middle"><tspan x="103" dy="0">Daily schedule</tspan></text>
+    <rect x="222" y="288" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="301" y="317" text-anchor="middle"><tspan x="301" dy="0">Find leads → draft</tspan><tspan x="301" dy="16">follow-up</tspan></text>
+    <rect x="420" y="288" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="499" y="317" text-anchor="middle"><tspan x="499" dy="0">Update count → send</tspan><tspan x="499" dy="16">SMS</tspan></text>
+    <rect x="618" y="189" width="158" height="64" rx="10" fill="#16233A" stroke="#3E526F"/>
+    <text x="697" y="218" text-anchor="middle"><tspan x="697" dy="0">Cal.com booking</tspan><tspan x="697" dy="16">tools</tspan></text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#A7B9D1">
+    <path d="M24 400h26" stroke="#F59A2C" stroke-width="2"/><text x="59" y="404">Processing flow</text>
+    <path d="M185 400h26" stroke="#A7B9D1" stroke-width="2" stroke-dasharray="4 4"/><text x="220" y="404">Tool or AI resource</text>
+  </g>
+</svg>
