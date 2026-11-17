@@ -6,13 +6,15 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** An independently authored, inactive n8n demo illustrates the review queue using fictional data and explicit rules. It has no live spreadsheet or AI integration.
+
 ## Business problem
 
-A small sales team opens a spreadsheet full of new enquiries and has to decide whom to call first.
+Imagine a training company opening its inbox on Monday. One prospect wants twelve seats in two weeks. Another is asking about two seats next quarter. A third forgot to say how many people need training. All three enquiries deserve a reply, but the coordinator has to decide which conversation to start first.
 
 ## Why the problem matters
 
-Reps can spend their response window reading rows instead of following up. A changing rubric also makes equivalent enquiries hard to compare.
+If every enquiry looks the same in the spreadsheet, the team has to reread each one before it can act. A shared rubric makes the order easier to explain and gives incomplete enquiries a place to go.
 
 ## Proposed automation solution
 
@@ -36,11 +38,23 @@ The diagram groups related steps from the reviewed export. See the [text equival
 
 ## Expected business value
 
-A shared rubric could reduce time to first review. Measure time to triage, reviewer agreement, and incorrect row updates.
+A shared rubric could reduce the time spent sorting enquiries. To evaluate it, compare time to first review, agreement between reviewers, and how often someone moves a lead to a different queue. A priority label should start a conversation and leave the follow-up decision with the coordinator.
 
 ## Current testing status
 
-The portfolio review was static. The example above illustrates the intended behavior. Malformed JSON can stop the flow. Positional merging and timestamp matching need tests for dropped replies and duplicate timestamps.
+The template review was static. Malformed JSON can stop the flow. Positional merging and timestamp matching need tests for dropped replies and duplicate timestamps. The local demo is inactive and has not been executed. None of the examples are measured results.
+
+## Local demo design
+
+The manual trigger leads to three steps. Load fictional enquiries, apply the qualification rules, and assemble the review queue. The demo keeps the decision traceable with a reason attached to each fictional record. The illustrative result below follows the written rules.
+
+| Fictional enquiry | Expected queue |
+| --- | --- |
+| 12 seats in 14 days | Priority |
+| 2 seats in 90 days | Standard |
+| Start in 20 days, seat count missing | Needs review |
+
+The template concept came from [Yulia’s n8n listing](https://n8n.io/workflows/2163-qualify-new-leads-in-google-sheets-via-openais-gpt-4/). The listing offers the template for use but does not specify redistribution rights. The local demo uses new code, node labels, and fictional fixtures.
 
 ## Architecture text equivalent
 
