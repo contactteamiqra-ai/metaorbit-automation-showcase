@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A service coordinator handles booking questions and has to remember which enquiries still need a follow-up.
@@ -20,7 +22,21 @@ Use an inbound SMS branch for command detection, session lookup, and booking act
 
 ## Workflow architecture
 
-![Architecture for appointment follow-up](../assets/appointment-follow-up-architecture.svg)
+![Real n8n editor canvas showing Incoming SMS, Classify request, Opt-out?, Record opt-out, Look up booking session, Check Cal.com slots, Draft reply with AI, Review SMS draft](../assets/appointment-follow-up-editor.png)
+
+*Captured directly from a local n8n editor. It shows 8 nodes and 7 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A repair shop closes at six. Three texts arrive at 6:05: a booking question, a reschedule, and one person asking to stop messages.
+
+The screenshot shows inbound Twilio SMS, an opt-out decision, and a separate booking path with Airtable, a Cal.com availability slot, an OpenAI draft, and a human review step. A coordinator receives a proposed reply with available slots. An opt-out is routed separately and bypasses drafting.
+
+Connect only sandbox Twilio and Airtable accounts. Configure the opt-out record mapping and booking-session lookup. The Cal.com request is a reserved placeholder. The graph has no automatic SMS send.
+
+Measure time to reply, booking completion, and any messages sent after an opt-out.
+
+The [template diagram](../assets/appointment-follow-up-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. Dashed arrows show tool or AI resource attachments. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 

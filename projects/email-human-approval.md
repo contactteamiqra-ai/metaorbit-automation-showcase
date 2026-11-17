@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A shared inbox receives repetitive enquiries that still need someone to review tone, facts, and commitments.
@@ -20,7 +22,21 @@ Convert inbound email to Markdown, summarize it, and draft a response using a kn
 
 ## Workflow architecture
 
-![Architecture for email drafts with human approval](../assets/email-human-approval-architecture.svg)
+![Real n8n editor canvas showing IMAP inbox, Prepare message excerpt, Look up guidance, Draft email, Request Gmail approval, Approved?, Stage SMTP send, Record rejection](../assets/email-human-approval-editor.png)
+
+*Captured directly from a local n8n editor. It shows 8 nodes and 7 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A shared inbox gets a booking-change request. The reply is easy to draft, but the dates and commitments still need a person’s review.
+
+The screenshot shows IMAP intake, a knowledge-lookup slot, an OpenAI email draft, a Gmail approval gate, and separate approval and rejection branches. The reviewer rejects the draft. The rejected branch stops at a review record instead of reaching SMTP.
+
+Map the approval response into the decision step and use test inboxes. Qdrant is a reserved placeholder and SMTP is disabled. Rejection reaches a separate review record.
+
+Measure review time, correction rate and any send without approval.
+
+The [template diagram](../assets/email-human-approval-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. Dashed arrows show tool or AI resource attachments. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 

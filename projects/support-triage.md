@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A support lead has a queue of old tickets with different reasons for being open.
@@ -20,7 +22,21 @@ A scheduled search selects aging Jira issues. A per-issue path retrieves the thr
 
 ## Workflow architecture
 
-![Architecture for support ticket triage](../assets/support-triage-architecture.svg)
+![Real n8n editor canvas showing Start manually, Find aging Jira issues, Find Notion guidance, Suggest next action, Review triage, Stage Slack handoff](../assets/support-triage-editor.png)
+
+*Captured directly from a local n8n editor. It shows 6 nodes and 5 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A team lead opens an aging queue. One ticket is waiting for the customer, another has a likely workaround, and a third has no answer at all.
+
+The screenshot shows the intended Jira and Notion lookup path, an OpenAI suggestion, and a disabled Slack handoff after review. The queue asks a reviewer to check the case and shows a proposed Slack handoff.
+
+Set the Jira age window and map relevant issue and Notion context into the draft. The Slack node is disabled. The graph has no Jira mutation or closure node.
+
+Measure reviewer agreement, time to unblock stale tickets and unintended state changes.
+
+The [template diagram](../assets/support-triage-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 

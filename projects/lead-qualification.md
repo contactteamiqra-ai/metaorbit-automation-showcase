@@ -6,7 +6,7 @@
 
 **Concept / Template Analysis**
 
-**Local demo status:** An independently authored, inactive n8n demo illustrates the review queue using fictional data and explicit rules. It has no live spreadsheet or AI integration.
+**Local demo status:** The adapted n8n workflow retains the Google Sheets and OpenAI nodes. It is inactive, with test destinations and credentials unconnected.
 
 ## Business problem
 
@@ -22,9 +22,11 @@ Apply an explicit rubric for decision-making responsibility, team size, and emai
 
 ## Workflow architecture
 
-![Architecture for lead qualification](../assets/lead-qualification-architecture.svg)
+![Real n8n editor canvas showing a manual trigger, Google Sheets read, input validation, OpenAI classification, reply validation, and Google Sheets update](../assets/lead-qualification-editor.png)
 
-The diagram groups related steps from the reviewed export. See the [text equivalent](#architecture-text-equivalent) for the same paths.
+*Captured directly from the local n8n editor. The warning icons mark unconfigured nodes. The screenshot shows the saved layout and connections.*
+
+The demo reads test rows on a manual trigger, rejects duplicate or invalid lead IDs, classifies the fictional inputs, and validates all replies before passing a rating to the Google Sheets update. It matches rows by lead ID. The [template diagram](../assets/lead-qualification-architecture.svg) and [text equivalent](#architecture-text-equivalent) describe the separate source concept.
 
 ## Integrations
 
@@ -46,19 +48,9 @@ The template review was static. Malformed JSON can stop the flow. Positional mer
 
 ## Local demo design
 
-![Real n8n editor canvas showing a manual trigger connected to Load fictional enquiries, Apply qualification rules, and Build review queue](../assets/lead-qualification-editor.png)
+For a future controlled test, use a separate sheet with fictional enquiries. Include a duplicate lead ID and an invalid AI reply. Check that the workflow stops before writing either batch and that a valid reply changes only the intended rating cell.
 
-*Captured directly from the local n8n editor. It shows the saved workflow structure. The demo was inactive and had never been run when captured.*
-
-The manual trigger leads to three steps. Load fictional enquiries, apply the qualification rules, and assemble the review queue. The demo keeps the decision traceable with a reason attached to each fictional record. The illustrative result below follows the written rules.
-
-| Fictional enquiry | Expected queue |
-| --- | --- |
-| 12 seats in 14 days | Priority |
-| 2 seats in 90 days | Standard |
-| Start in 20 days, seat count missing | Needs review |
-
-The template concept came from [Yulia’s n8n listing](https://n8n.io/workflows/2163-qualify-new-leads-in-google-sheets-via-openais-gpt-4/). The listing offers the template for use but does not specify redistribution rights. The local demo uses new code, node labels, and fictional fixtures.
+The source concept is credited to [Yulia’s n8n listing](https://n8n.io/workflows/2163-qualify-new-leads-in-google-sheets-via-openais-gpt-4/). Redistribution rights remain unverified. This page shares the canvas of the local adaptation, with rewritten validation and fictional test inputs.
 
 ## Architecture text equivalent
 

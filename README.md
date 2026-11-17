@@ -8,6 +8,8 @@ Ten visual case studies on how sales, support, and operations teams could use n8
 
 **Concept / Template Analysis** applies to all ten projects. The portfolio documents third-party workflow concepts through static review. Illustrations use fictional inputs and outcomes.
 
+Each case study also includes a real n8n editor screenshot of its separate, inactive demonstration. The canvas shows the saved nodes and connections. Successful execution and live integrations remain unverified.
+
 [Featured projects](#featured-projects) · [Sales & CRM](#sales--crm) · [Messaging](#messaging) · [E-commerce](#e-commerce) · [Customer Support](#customer-support) · [Analytics & Reporting](#analytics--reporting) · [Make.com](#makecom) · [Credits](CREDITS.md)
 
 ## Featured projects

@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A shopper knows their budget and use case but has trouble translating them into catalog filters.
@@ -20,7 +22,21 @@ Extract shopping intent and pass it to an agent with a WooCommerce search tool, 
 
 ## Workflow architecture
 
-![Architecture for personal shopper](../assets/personal-shopper-architecture.svg)
+![Real n8n editor canvas showing Start manually, Load shopping brief, Search WooCommerce catalog, Look up store policy, Draft a shortlist, Review recommendations](../assets/personal-shopper-editor.png)
+
+*Captured directly from a local n8n editor. It shows 6 nodes and 5 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A customer wants a waterproof commuter bag under $70. The catalog uses different words, and the shopper has to open each listing to check stock.
+
+The screenshot shows a fictional shopping brief followed by WooCommerce, a store-policy lookup, an OpenAI shortlist, and reviewer handoff. A proposed shortlist states the price and stock for returned matches or explains that no verified match is available.
+
+Map the shopping brief into WooCommerce’s filters and combine catalog and policy results before drafting. The Qdrant request is a reserved placeholder. The graph has no checkout or messaging step.
+
+Measure catalog match rate and how often a reviewer corrects price, stock, or policy claims.
+
+The [template diagram](../assets/personal-shopper-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. Dashed arrows show tool or AI resource attachments. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 
