@@ -46,6 +46,10 @@ The template review was static. Malformed JSON can stop the flow. Positional mer
 
 ## Local demo design
 
+![Real n8n editor canvas showing a manual trigger connected to Load fictional enquiries, Apply qualification rules, and Build review queue](../assets/lead-qualification-editor.png)
+
+*Captured directly from the local n8n editor. It shows the saved workflow structure. The demo was inactive and had never been run when captured.*
+
 The manual trigger leads to three steps. Load fictional enquiries, apply the qualification rules, and assemble the review queue. The demo keeps the decision traceable with a reason attached to each fictional record. The illustrative result below follows the written rules.
 
 | Fictional enquiry | Expected queue |
