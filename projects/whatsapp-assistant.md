@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A business receives the same basic questions through WhatsApp and keeps reference material in Drive.
@@ -20,7 +22,21 @@ Route message events to an AI reply agent and send a text response. A separate m
 
 ## Workflow architecture
 
-![Architecture for whatsapp assistant](../assets/whatsapp-assistant-architecture.svg)
+![Real n8n editor canvas showing WhatsApp intake, Look up knowledge, Draft a reply, Review reply, Manual knowledge refresh, List Drive documents, Prepare index records, Stage Qdrant update](../assets/whatsapp-assistant-editor.png)
+
+*Captured directly from a local n8n editor. It shows 8 nodes and 6 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A store gets the same holiday-hours question on WhatsApp while the current answer lives in a shared Drive document.
+
+The screenshot shows a WhatsApp intake path and a separate manual Drive-to-Qdrant design. The reply branch has an explicit lookup step before the OpenAI draft. The draft cites an available policy excerpt or asks a person to confirm the hours.
+
+The two Qdrant requests are reserved placeholders. Document retrieval, chunking, embeddings, and collection mapping need configuration. The reply ends at review and cannot send a WhatsApp message.
+
+Measure answer accuracy against current policy and the number of requests that need human review.
+
+The [template diagram](../assets/whatsapp-assistant-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 

@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A shopper asks where an order is, and a support rep has to check both the store and the carrier.
@@ -20,7 +22,21 @@ A chat agent calls an order lookup tool. The tool resolves a customer, retrieves
 
 ## Workflow architecture
 
-![Architecture for order and shipment support](../assets/order-support-architecture.svg)
+![Real n8n editor canvas showing Start manually, Create test order context, Look up WooCommerce order, Tracking available?, Look up DHL tracking, Draft status summary, Review draft](../assets/order-support-editor.png)
+
+*Captured directly from a local n8n editor. It shows 7 nodes and 7 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A shopper asks where a parcel is. The support rep has to check the store order and the carrier while keeping another shopper’s order out of sight.
+
+The screenshot shows a WooCommerce order lookup, a tracking decision with a DHL branch, and a review step for the drafted reply. The draft states that tracking is unavailable and tells the rep which field needs checking.
+
+The tracking branch expects a mapped boolean. A sandbox identity and order-ownership check must be implemented before any real lookup, and the DHL destination is a reserved placeholder. The graph ends at review.
+
+Measure lookup accuracy, handling time and incorrect disclosure in an authorized sandbox.
+
+The [template diagram](../assets/order-support-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. Dashed arrows show tool or AI resource attachments. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 

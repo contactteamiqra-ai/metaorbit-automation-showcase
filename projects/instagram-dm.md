@@ -6,6 +6,8 @@
 
 **Concept / Template Analysis**
 
+**Local demo status:** Independently adapted in n8n, inactive, and unexecuted. Credentials and live destinations are unconnected.
+
 ## Business problem
 
 A brand gets repetitive questions in Instagram DMs while staff handle other customer work.
@@ -20,7 +22,21 @@ ManyChat posts incoming text and a session key to n8n. The workflow sets a perso
 
 ## Workflow architecture
 
-![Architecture for instagram dm assistant](../assets/instagram-dm-architecture.svg)
+![Real n8n editor canvas showing ManyChat payload, Validate message, Draft DM reply, Shape webhook response, Return to ManyChat](../assets/instagram-dm-editor.png)
+
+*Captured directly from a local n8n editor. It shows 5 nodes and 4 connections. Names ending in `.invalid` are placeholders. Warning and disabled states are visible in the capture.*
+
+### What the demo illustrates
+
+A brand gets a pickup question in Instagram DMs just as the team is closing for the day.
+
+The screenshot shows the ManyChat-facing webhook and explicit input validation, followed by an OpenAI draft and a webhook response. The webhook response returns a draft or a clear indication that the payload needs manual review.
+
+Supply a sandbox ManyChat mapping and confirm the expected response schema and timing. The webhook is inactive. The editor contains no direct Instagram account connection.
+
+Measure payload errors, response quality and how often a person must correct a draft.
+
+The [template diagram](../assets/instagram-dm-architecture.svg) summarizes the reviewed source concept. The screenshot shows the separate adaptation. Source authorship and redistribution rights remain unverified. The original export, prompts, account references, and template artwork are excluded.
 
 The diagram groups related steps from the reviewed export. Dashed arrows show tool or AI resource attachments. See the [text equivalent](#architecture-text-equivalent) for the same paths.
 
